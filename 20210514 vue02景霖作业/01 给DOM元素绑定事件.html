@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-on指令 -->
+        <!-- v-on:click -->
+        <button v-on:click="say()">btn-1</button>
+        <!-- 语法糖：@ -->
+        <button @click="say()">btn-2</button>
+        <button @contextmenu="demo()">btn-3</button>
+        <hr>
+        <!-- 参数集合问题 -->
+        <!-- 没有设置参数，此时传递了一个事件对象 -->
+        <button @click="xxoo">btn-4</button>
+        <!-- 设置参数，默认传递的参数 -->
+        <button @click="xxoo()">btn-5</button>
+        <!-- 传递参数，并且想使用事件对象，传递$event -->
+        <button @click="xxoo(1, true, null, $event, 'i love you')">btn-6</button>
+        <hr>
+        <button>btn-7</button>
+        <button>btn-8</button>
+        <button>btn-9</button>
+        <button>btn-10</button>
+    </div>
+    <script src="./dist/01.js"></script>
+</body>
+</html>

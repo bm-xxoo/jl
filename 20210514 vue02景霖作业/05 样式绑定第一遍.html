@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 对象 -->
+        <div :style="{
+            color:'red',
+            backgroundColor:'pink'
+        }">斑码教育</div>
+        <!-- 数组 -->
+        <div :style="[
+            {
+                color: 'blue',
+                'background-color': 'purple'
+            },
+            {
+                margin: '50px',
+                textAlign: 'center'
+            }
+        ]">斑动梦想，码上起航！</div>
+        <!-- 字符串 -->
+        <div :style="'color':red; fontSize:100px;">6666</div>
+
+    </div>
+    <script src="dist/05.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 遍历数字 -->
+        <ul>
+            <!-- 第一种形式 -->
+            <li v-for="value in 5" :key="value">{{value}}</li>
+        </ul>
+        <ol>
+            <li v-for="(value,index) in 5" :key="index">{{value}}</li>
+        </ol>
+        <!-- 遍历对象 -->
+        <ul>
+            <li v-for="(value, key) in books" :key="key">{{key + '----------' + value}}</li>
+        </ul>
+        <!-- 遍历数组 -->
+        <ol>
+            <li v-for="(value, index) in news" :key="index">{{value}}</li>
+        </ol>
+        <!-- 模板 -->
+        <ul>
+            <template v-for="(value,index) in news">
+                <li :key="index">{{value}}</li>
+                <hr>
+            </template>
+        </ul>
+    </div>
+    <script src="./dist/08.js"></script>
+</body>
+</html>
