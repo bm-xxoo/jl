@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="toggle">toggle</button>
+        <input type="text" v-model="msg">
+        <h1 v-show="flag">{{msg}}</h1>
+        <h2 v-bm-show="flag">{{msg}}</h2>
+    </div>
+    <script src="./dist/04.js"></script>
+</body>
+</html>

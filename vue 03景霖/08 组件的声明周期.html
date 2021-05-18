@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="toggle">切换组件</button>
+        <input type="text" v-model="msg">
+        <h1>{{msg}}</h1>
+        <hr>
+        <!-- 动态组件 -->
+        <!-- keep alive组件 -->
+        <keep-alive>
+            <component :is="com"></component>
+        </keep-alive>
+    </div>
+    <!-- 组件模板 -->
+    <template id="tpl">
+        <div>
+            <h1>子组件：{{title}}</h1>
+            <h2>子组件：{{name}}</h2>
+            <input type="text" v-model="title">
+        </div>
+    </template>
+    <script src="./dist/08.js"></script>
+</body>
+</html>
