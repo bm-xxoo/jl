@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{num}}</h1>
+        <h1>{{$store.state.msg}}</h1>
+        <button @click="addNum">addNum</button>
+        <hr>    
+        <child></child>
+        <hr>
+        <other></other>   
+    </div>
+    <template id="child">
+        <div>
+            <h1>child</h1>
+            <h2>{{$store.state.msg}}</h2>
+            <button @click="$store.commit('reduceNum')">reduceNum</button>
+
+        </div>
+    </template>
+    <template id="other">
+        <div>
+            <h1>other</h1>
+            <h2>{{$store.state.msg}}</h2>
+            <button @click="$store.dispatch('resetNum', [1, 2, true])">2秒后数据重置</button>
+            <hr>
+            <h1>{{$store.state.num}}</h1>
+
+        </div>
+    </template>
+    <script src="dist/08.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <a href="#/first">first</a>
+        <a href="#/second">second</a>
+        <a href="#/three">thress</a>
+        <h1>App</h1>
+        <hr>
+        <!-- 确定路由的渲染位置 -->
+        <router-view></router-view>
+    </div>
+    <!-- 组件模板 -->
+    <template id="first">
+        <div>
+            <h1>header</h1>
+            <h2>data: {{$route.name}}---{{$route.fullPath}}------{{$route.query.name}}</h2>
+        </div>
+    </template>
+    <template id="second">
+        <div>
+            <h1>main</h1>
+            <h2>data: {{id}}----{{name}}--- {{fullPath}}</h2>
+        </div>
+    </template>
+    <script src="./dist/15.js"></script>
+</body>
+</html>

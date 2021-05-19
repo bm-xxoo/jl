@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        子组件向父组件传递消息，默认二者不能共享数据，但是组件和父组件都可以绑定事件和触发事件
+        1、自定义事件的绑定和触发
+        2、组件之间的事件是相互独立的
+
+     -->
+    <div id="app">
+        <h1 @demo="">{{msg}}</h1>
+        <hr/>
+        <child></child>   
+    </div>
+    <script src="dist/02.js"></script>
+</body>
+</html>

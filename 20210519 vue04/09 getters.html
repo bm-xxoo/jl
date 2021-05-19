@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="addNum">addNum</button>
+        <hr>    
+        <child></child>
+        <hr>
+        <other></other>   
+    </div>
+    <template id="child">
+        <div>
+            <h1>child</h1>
+            <button @click="$store.commit('reduceNum')">reduceNum</button>
+
+        </div>
+    </template>
+    <template id="other">
+        <div>
+            <h1>other</h1>
+            <h1>{{$store.state.num}}</h1>
+            <h2>{{$store.getters.doubleNum}}---{{$store.getters.doubleNum}}---{{$store.getters.doubleNum}}</h2>
+
+        </div>
+    </template>
+    <script src="dist/09.js"></script>
+</body>
+</html>
