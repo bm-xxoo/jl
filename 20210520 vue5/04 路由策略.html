@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="link">
+            <!-- 路由导航 -->
+            <!-- <a href="/first">first</a>
+            <a href="/second">second</a>
+            <a href="/three">three</a>
+            <a href="/three/a">three-a</a>
+            <a href="/b">three-b</a> -->
+            <router-link to="/first" tag="button">first</router-link>
+            <router-link to="/second">second</router-link>
+            <router-link to="/three">three</router-link>
+            <router-link to="/three/a">three-a</router-link>
+            <router-link to="/b">three-b</router-link>
+        </div>
+        <h1>app part</h1>
+        <hr>
+        <!-- 路由的渲染位置 -->
+        <router-view></router-view>
+    </div>
+    <script src="/dist/04.js"></script>
+</body>
+</html>

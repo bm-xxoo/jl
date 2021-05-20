@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="link">
+            <router-link to="/first" >first</router-link>
+            <router-link to="/second">second</router-link>
+            <router-link to="/three">three</router-link>
+        </div>
+        <h1>app part</h1>
+        <hr>
+        <!-- 路由的渲染位置 -->
+        <keep-alive>
+                <router-view></router-view>
+        </keep-alive>
+
+    </div>
+    <script src="./dist/06.js"></script>
+</body>
+</html>
